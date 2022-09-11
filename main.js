@@ -42,9 +42,9 @@ const nextIP = Object.entries(newIP);
 // console.info(nextIP);
 
 // IP ADDRESS
-const local = nextIP[0][1][0]
-const network = nextIP[1][1][0];
-const personal = ip.address();
+// const local = nextIP[0][1][0]
+// const network = nextIP[1][1][0];
+// const personal = ip.address();
 
 const port = process.env.PORT || 3300
 // const network = 'unavailbale';
