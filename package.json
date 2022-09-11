@@ -1,0 +1,42 @@
+{
+  "name": "lifestyle-blog-fastify-server",
+  "version": "1.0.0",
+  "description": "fastify backend for a blog website",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon main.js"
+  },
+  "keywords": [
+    "fastify",
+    "blog-backend"
+  ],
+  "author": "Emmanuel Godswill",
+  "license": "ISC",
+  "devDependencies": {
+    "@fastify/mongodb": "^6.0.1",
+    "ajv-errors": "^3.0.0",
+    "fastify": "^4.5.2",
+    "fastify-plugin": "^4.2.0",
+    "nodemon": "^2.0.19"
+  },
+  "dependencies": {
+    "@fastify/auth": "^3.0.2",
+    "@fastify/cookie": "^8.0.0",
+    "@fastify/cors": "^8.1.0",
+    "@fastify/env": "^4.1.0",
+    "@fastify/jwt": "^6.3.2",
+    "@fastify/static": "^6.5.0",
+    "@fastify/view": "^7.1.0",
+    "ajv-formats": "^2.1.1",
+    "ajv-i18n": "^4.2.0",
+    "chalk": "^5.0.1",
+    "cloudinary": "^1.31.0",
+    "ejs": "^3.1.8",
+    "fastify-multer": "^2.0.3",
+    "fastify-vite": "^3.0.0-beta.24",
+    "graphql": "^16.6.0",
+    "ip": "^1.1.8",
+    "mercurius": "^10.1.1"
+  }
+}

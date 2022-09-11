@@ -1,0 +1,42 @@
+
+<form>
+  <input type="file" name="image" />
+  <input type="text" name="folder" id="">
+  <button type="submit">submit now</button>
+</form>
+<div>
+  <ul id="list"></ul>
+</div>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+  console.log('script works');
+  const listRoot = document.getElementById('list');
+  function handleRequest() {
+    axios.get("http://192.168.72.2:3000/all-planets").then(function (response) {
+        console.log(response.data)
+        response.data.forEach((data) => {
+          listRoot.innerHTML +=  `
+            <li>${ data.name }</li>
+          `
+        })
+    })
+  }
+  handleRequest();
+
+  function uploadImage (formData) {
+    axios.post("http://192.168.72.2:3000/image/upload", formData)
+    .then((res) => {
+      console.log(res);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+  }
+
+  const form = document.querySelector("form");
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const formData = new FormData(form);
+    uploadImage(formData);
+  })
+</script>
