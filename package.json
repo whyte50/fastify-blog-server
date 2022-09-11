@@ -9,7 +9,7 @@
     "start": "node main.js"
   },
   "engines": {
-    "node": ">=16"
+    "node": "16.x"
   },
   "keywords": [
     "fastify",
