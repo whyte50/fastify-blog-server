@@ -47,8 +47,8 @@ const nextIP = Object.entries(newIP);
 // const personal = ip.address();
 
 const port = process.env.PORT || 3300
-// const network = 'unavailbale';
-// const local = 'unavailbale';
+const network = 'unavailbale';
+const local = 'unavailbale';
 
 console.info(chalk.cyanBright(network, local, personal));
 console.info(crypto.randomBytes(20).toString('hex'));
