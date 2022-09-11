@@ -3,7 +3,7 @@ import Fastify from 'fastify';
 import chalk from 'chalk';
 // IP ADDRESS
 import { networkInterfaces } from 'os';
-import ip from 'ip'
+// import ip from 'ip'
 import crypto from "crypto";
 // CUSTOM SCHEMA && STRING FORMATTING
 import Ajv from 'ajv';
@@ -50,7 +50,7 @@ const port = process.env.PORT || 3300
 const network = 'unavailbale';
 const local = 'unavailbale';
 
-console.info(chalk.cyanBright(network, local, personal));
+console.info(chalk.cyanBright(network, local));
 console.info(crypto.randomBytes(20).toString('hex'));
 console.log(chalk.greenBright(new Date().toDateString()))
 // Declare a route
