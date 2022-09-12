@@ -12,7 +12,7 @@
   console.log('script works');
   const listRoot = document.getElementById('list');
   function handleRequest() {
-    axios.get("http://192.168.72.2:3000/all-planets").then(function (response) {
+    axios.get(`${window.location.origin}/all-planets`).then(function (response) {
         console.log(response.data)
         response.data.forEach((data) => {
           listRoot.innerHTML +=  `
@@ -24,7 +24,7 @@
   handleRequest();
 
   function uploadImage (formData) {
-    axios.post("http://192.168.72.2:3000/image/upload", formData)
+    axios.post(`${window.location.origin}/image/upload`, formData)
     .then((res) => {
       console.log(res);
     })
@@ -32,6 +32,8 @@
       console.log(err);
     });
   }
+
+  console.log(window.location.origin)
 
   const form = document.querySelector("form");
   form.addEventListener("submit", (e) => {

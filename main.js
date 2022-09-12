@@ -79,6 +79,12 @@ fastify.register(import('./routes/auth.js'))
 fastify.register(import('./routes/blog.js'),{ prefix: '/v1' })
 fastify.register(import('./routes/image.cloudinary.js'),{ prefix: '/image' })
 
+fastify.get('/ping', async (request, reply) => {
+  reply
+  .code(200)
+  .send({ message: 'OK' })
+})
+
 fastify.listen({ port: port }, function (err, address) {
   if (err) { fastify.log.error(err); process.exit(1) }
   console.log(chalk.blue(`server listening on ${address} & `), chalk.blue(`ip ${network}`))
